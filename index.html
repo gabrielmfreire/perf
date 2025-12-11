@@ -1,0 +1,661 @@
+<!DOCTYPE html>
+<html class="light" lang="pt-BR">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PerfilarIA® - Ensaios Fotográficos Profissionais</title>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Spline+Sans:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet" />
+
+  <!-- Material Symbols -->
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
+    rel="stylesheet" />
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+
+  <!-- Tailwind Theme Configuration -->
+  <script>
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "primary": "#f9f506",
+            "primary-hover": "#e6e205",
+            "background-light": "#f8f8f5",
+            "background-dark": "#1a1a1a",
+            "surface-dark": "#232323",
+            "text-dark": "#e0e0e0",
+            "muted-dark": "#a0a0a0",
+          },
+          fontFamily: {
+            "display": ["Spline Sans", "sans-serif"]
+          },
+          borderRadius: {
+            "DEFAULT": "1rem",
+            "lg": "2rem",
+            "xl": "3rem",
+            "full": "9999px"
+          },
+        },
+      },
+    }
+  </script>
+
+  <!-- JuxtaposeJS -->
+  <link rel="stylesheet" href="https://cdn.knightlab.com/libs/juxtapose/latest/css/juxtapose.css">
+  <script src="https://cdn.knightlab.com/libs/juxtapose/latest/js/juxtapose.min.js"></script>
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body class="bg-background-dark text-text-dark antialiased">
+  <!-- Header -->
+  <header class="sticky top-0 z-50 w-full border-b border-white/10 bg-background-dark/80 backdrop-blur-md">
+    <div class="mx-auto flex h-20 max-w-7xl items-center justify-between px-6 lg:px-8">
+      <div class="flex items-center gap-3">
+        <div class="flex h-10 w-10 items-center justify-center rounded-full bg-primary text-black">
+          <span class="material-symbols-outlined">auto_fix_high</span>
+        </div>
+        <span class="text-xl font-bold tracking-tight text-white">PerfilarIA®</span>
+      </div>
+      <nav class="hidden md:flex items-center gap-8">
+        <a href="#como-funciona" class="text-sm font-medium text-gray-300 transition hover:text-primary">Como
+          Funciona</a>
+        <a href="#galeria" class="text-sm font-medium text-gray-300 transition hover:text-primary">Galeria</a>
+        <a href="#beneficios" class="text-sm font-medium text-gray-300 transition hover:text-primary">Benefícios</a>
+        <a href="#depoimentos" class="text-sm font-medium text-gray-300 transition hover:text-primary">Depoimentos</a>
+      </nav>
+      <div class="flex items-center gap-4">
+        <a href="#agendar"
+          class="hidden sm:flex items-center justify-center rounded-full bg-primary px-6 py-2.5 text-sm font-bold text-black transition hover:bg-primary-hover">
+          Agendar Ensaio
+        </a>
+        <button class="md:hidden text-white">
+          <span class="material-symbols-outlined text-3xl">menu</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero Section -->
+    <section class="relative overflow-hidden pt-16 pb-24 lg:pt-32 lg:pb-40">
+      <div class="absolute inset-0 z-0">
+        <div class="absolute inset-0 bg-gradient-to-b from-blue-900/10 to-background-dark"></div>
+        <div class="absolute -top-40 -right-40 h-[500px] w-[500px] rounded-full bg-primary/5 blur-[120px]"></div>
+      </div>
+      <div class="container relative z-10 mx-auto max-w-7xl px-6 lg:px-8">
+        <div class="grid gap-12 lg:grid-cols-2 lg:items-center">
+          <div class="flex flex-col gap-6">
+            <div
+              class="inline-flex w-fit items-center gap-2 rounded-full border border-white/10 bg-white/5 px-4 py-1.5 backdrop-blur-sm">
+              <span class="flex h-2 w-2 rounded-full bg-green-500"></span>
+              <span class="text-xs font-medium uppercase tracking-wider text-gray-300">Tecnologia de Ponta</span>
+            </div>
+            <h1 class="text-4xl font-bold leading-[1.1] tracking-tight text-white sm:text-5xl lg:text-6xl">
+              Sua Imagem Profissional, <span class="text-primary">reinventada com tecnologia</span>
+            </h1>
+            <p class="max-w-xl text-lg text-gray-400">
+              Transforme selfies comuns em ensaios fotográficos de alto padrão. Sem estúdio, sem fotógrafo.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 pt-4">
+              <a href="#agendar"
+                class="inline-flex h-12 items-center justify-center rounded-full bg-primary px-8 text-base font-bold text-black transition hover:bg-primary-hover hover:scale-105 transform duration-200">
+                Iniciar Transformação
+                <span class="material-symbols-outlined ml-2 text-xl">arrow_forward</span>
+              </a>
+              <a href="#galeria"
+                class="inline-flex h-12 items-center justify-center rounded-full border border-white/20 bg-transparent px-8 text-base font-medium text-white transition hover:bg-white/5">
+                Ver Exemplos
+              </a>
+            </div>
+            <div class="flex items-center gap-4 pt-4">
+              <div class="flex -space-x-3">
+                <img
+                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuBPmt53EKvINzM4EgdCXPWd8BRvnQGdXE1w5xzHAFc7rgJAlMON5MhSeBt0hkpt9ULBC3Yg-gRMxTQA7RGBZ1MOO7zDMYYA_UxI2sHmxiYhjd-xOiTH1owLTTwpRSQYhanftNJmCamGYj0t7gDvlcazmVuuY0Uyp6HaM3zh_QVGIf1k9Urut0BqWecIGrM_eIYrlTzQkSZaZm6-_jXc_PJ7KoRr7cp2wkOwKYTP2qzFEdfD4hk0RBgXtByhkc2mwyQ__5RZW2ZCVzE"
+                  alt="Portrait of a happy client 1"
+                  class="h-10 w-10 rounded-full border-2 border-background-dark object-cover" />
+                <img
+                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuD5KHxEkLSQ7BeVaHVUqomAnXlMdrbfnQUuAI_3MtwNY7yYxxdQfutkiuCVc9KftWhsxNTFeJoT5lt-K-dHDVAvHlM0Nkrbg2Er8FubTS17LfxZHzXCSzUunqiO2CGYfvWL4SVlNp6qPuvvZAlw66CyruLBpnqxl_gn5wYvkGN0xFV5TD1g_BUNpzfEWGXDBot63qRzJBHsfRZeICdg1Qzrt_n-S77dEd5AQ5tXIjT08sZP9k3h-lxNlKtMhg1pWAmXuk_X1jXkFhQ"
+                  alt="Portrait of a happy client 2"
+                  class="h-10 w-10 rounded-full border-2 border-background-dark object-cover" />
+                <img
+                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuDZhOUksF8iFIehfQI5ez3mNY-QKvxp1e02nFBTE7oFUAcQr-QXgPWHnfZe6Z5hJpIIOMT75V58gjyAcXg8_oytpMrOHMyTpNSBGTCHnb0ClblkZK1ii9JhHkLlv_LOsMjcnKY0zMpMaymS95CDTsAmw-HR0utlsoVS3C7sVjoTHqNKgOk3ulPonvEtNNJU8xf5hkxK43v7xLFjIfd1ZWt9IVn3WM9Fp0aku3sQFg4vEkjKyYFPQGRJ1kPLNq8tI72u_N7dLUkNA4M"
+                  alt="Portrait of a happy client 3"
+                  class="h-10 w-10 rounded-full border-2 border-background-dark object-cover" />
+              </div>
+              <div class="text-sm">
+                <div class="flex items-center text-primary">
+                  <span class="material-symbols-outlined text-base fill-current">star</span>
+                  <span class="material-symbols-outlined text-base fill-current">star</span>
+                  <span class="material-symbols-outlined text-base fill-current">star</span>
+                  <span class="material-symbols-outlined text-base fill-current">star</span>
+                  <span class="material-symbols-outlined text-base fill-current">star</span>
+                </div>
+                <span class="text-gray-400">Mais de 1500 retratos produzidos.</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Before/After Juxtapose Wrapper (conteúdo será criado via JS) -->
+          <div class="relative mx-auto w-full max-w-[500px] lg:mr-0">
+            <div id="juxtapose-hero" class="hero-juxtapose-wrapper"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Stats / Trust Bar -->
+    <div class="border-y border-white/5 bg-white/[0.02]">
+      <div class="mx-auto max-w-7xl px-6 py-8 lg:px-8">
+        <div class="grid grid-cols-2 gap-8 text-center md:grid-cols-4">
+          <div class="flex flex-col gap-1">
+            <span class="text-3xl font-bold text-white">3</span>
+            <span class="text-sm text-gray-400">Estilos por Ensaio</span>
+          </div>
+          <div class="flex flex-col gap-1">
+            <span class="text-3xl font-bold text-white">Até 72h</span>
+            <span class="text-sm text-gray-400">Entrega Rápida</span>
+          </div>
+          <div class="flex flex-col gap-1">
+            <span class="text-3xl font-bold text-white">2k</span>
+            <span class="text-sm text-gray-400">Resolução Super HD</span>
+          </div>
+          <div class="flex flex-col gap-1">
+            <span class="text-3xl font-bold text-white">100%</span>
+            <span class="text-sm text-gray-400">Privacidade Garantida</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- How It Works Section -->
+    <section class="py-24 bg-background-dark" id="como-funciona">
+      <div class="mx-auto max-w-7xl px-6 lg:px-8">
+        <div class="text-center max-w-2xl mx-auto mb-16">
+          <h2 class="text-3xl font-bold text-white sm:text-4xl">Como Funciona a Mágica?</h2>
+          <p class="mt-4 text-lg text-gray-400">Você não precisa sair de casa. Nosso processo é 100% digital, simples e
+            com resultados surpreendentes.</p>
+        </div>
+        <div class="grid gap-8 md:grid-cols-3">
+          <div class="group relative overflow-hidden rounded-2xl bg-surface-dark p-8 transition-all hover:bg-white/5">
+            <div
+              class="mb-6 flex h-14 w-14 items-center justify-center rounded-xl bg-primary/10 text-primary group-hover:bg-primary group-hover:text-black transition-colors">
+              <span class="material-symbols-outlined text-3xl">upload_file</span>
+            </div>
+            <h3 class="mb-3 text-xl font-bold text-white">1. Envie suas Fotos</h3>
+            <p class="text-gray-400 leading-relaxed">
+              Faça o upload de 10 a 20 fotos suas (selfies, corpo inteiro, variadas). Quanto mais variadas, melhor nosso
+              sistema
+              aprenderá seus traços.
+            </p>
+          </div>
+          <div class="group relative overflow-hidden rounded-2xl bg-surface-dark p-8 transition-all hover:bg-white/5">
+            <div
+              class="mb-6 flex h-14 w-14 items-center justify-center rounded-xl bg-primary/10 text-primary group-hover:bg-primary group-hover:text-black transition-colors">
+              <span class="material-symbols-outlined text-3xl">psychology</span>
+            </div>
+            <h3 class="mb-3 text-xl font-bold text-white">2. Criação e Definição de Estilo</h3>
+            <p class="text-gray-400 leading-relaxed">
+              Processamos suas imagens, aprendemos sua fisionomia e criamos um modelo exclusivo seu
+              em cenários profissionais.
+            </p>
+          </div>
+          <div class="group relative overflow-hidden rounded-2xl bg-surface-dark p-8 transition-all hover:bg-white/5">
+            <div
+              class="mb-6 flex h-14 w-14 items-center justify-center rounded-xl bg-primary/10 text-primary group-hover:bg-primary group-hover:text-black transition-colors">
+              <span class="material-symbols-outlined text-3xl">photo_library</span>
+            </div>
+            <h3 class="mb-3 text-xl font-bold text-white">3. Receba o Ensaio</h3>
+            <p class="text-gray-400 leading-relaxed">
+              Em até 72 horas, você recebe um link para baixar seu ensaio completo com fotos em alta resolução
+              prontas para o LinkedIn e suas redes sociais.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section class="py-24 bg-surface-dark relative" id="galeria">
+      <div class="mx-auto max-w-7xl px-6 lg:px-8">
+        <div class="mb-12 flex flex-col md:flex-row md:items-end justify-between gap-6">
+          <div class="max-w-xl">
+            <h2 class="text-3xl font-bold text-white sm:text-4xl">Exemplos de Resultados</h2>
+            <p class="mt-4 text-lg text-gray-400">
+              Eleve o potencial de sua presença online. Uma única pessoa, diversos estilos profissionais.
+            </p>
+          </div>
+          <div class="flex gap-2">
+            <button
+              class="flex h-10 w-10 items-center justify-center rounded-full border border-white/20 text-white hover:bg-white/10">
+              <span class="material-symbols-outlined">arrow_back</span>
+            </button>
+            <button
+              class="flex h-10 w-10 items-center justify-center rounded-full bg-primary text-black hover:bg-primary-hover">
+              <span class="material-symbols-outlined">arrow_forward</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Grid sem espaços vazios -->
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+
+          <!-- 1 - Corporativo Executivo -->
+          <div class="relative overflow-hidden rounded-2xl group aspect-[3/4]">
+            <img
+              src="https://lh3.googleusercontent.com/aida-public/AB6AXuDTihqjbl_KinC965aTjQ9dElwnfI_t8xQonqoHJS8xCnOn18Y7FqDDYHAvLSkfw3jLOZnft_9BxrbKWuXzvM70hcQB_J1Vjnn3ciuFTlkqzUYj62CFTNExloFUnPlAkrdd8VL7pUeDHZXjWNUAdYJSYl8wEUhicFr_UTkVmWrtXgpzHqWk-r6InN5p-weD_x5Lp9ER50Q7X1wbIwxwpU30nl0KdPa97Qben3OkctR6mrmJcz7DDa7I5k09CCkCe-8SOOGqOR4VZWI"
+              alt="AI generated woman in business suit portrait"
+              class="absolute inset-0 h-full w-full object-cover transition duration-500 group-hover:scale-110" />
+            <div
+              class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition duration-300 flex items-end p-3">
+              <div>
+                <p class="text-white text-sm font-bold">Corporativo Executivo</p>
+                <p class="text-gray-300 text-[11px]">LinkedIn Premium</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- 2 - Casual Tech -->
+          <div class="relative overflow-hidden rounded-2xl group aspect-[3/4]">
+            <img
+              src="https://lh3.googleusercontent.com/aida-public/AB6AXuDUKjRQOeVQLafko4f1-g4RmbGCx9_ZRIh8x4iLZ-hEwotHzZOon0DwJPM-AwNCBIqPQO2GROeJThfBMbQd1DVCtRLNDWIs_bklZfs9a8lBEmzI6s_Vi4xBiE9kxIGdYGpSiUzD_tM4F28MMdQldxHD3cXJgSmUTb-jVq7_c_NKOsjHh-fde0wIbYJP1kuWIdWiQFCt6wLyl68xEh1aMBrZQP9dC1galI4ariC8vYTovCffuD9BBreU1-qpO9XZcXbN54Rw0285QUo"
+              alt="AI generated woman casual tech style"
+              class="absolute inset-0 h-full w-full object-cover transition duration-500 group-hover:scale-110" />
+            <div
+              class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition duration-300 flex items-end p-3">
+              <div>
+                <p class="text-white text-sm font-bold">Casual Tech</p>
+                <p class="text-gray-300 text-[11px]">Ambiente criativo e descontraído</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- 3 - Criativo -->
+          <div class="relative overflow-hidden rounded-2xl group aspect-[3/4]">
+            <img
+              src="https://lh3.googleusercontent.com/aida-public/AB6AXuBzMRNx4hkAviogNI7TzU_8SujVCH8vFJlY9t1vIDQRTwIbZD0jK6um-Zuzudz5Qig5mDn-I9y3wp3-zxXWslpY10TmECRWhpU1EfNMlX2Uf5Kn6bnEuBFLljEwnsZZLKD1jh880pINKzEa5MTHoNITeFn1uUFFg3as0ElDXqr16yNX46mci6-DS_b7LEgDNSLLzFOo-zl2aZT8P_N1xuGz-GFoNpln6MFLngzQh95wZKCz96PmrPUETdGOVzrXKjChEW0-dgu1atY"
+              alt="AI generated woman creative studio"
+              class="absolute inset-0 h-full w-full object-cover transition duration-500 group-hover:scale-110" />
+            <div
+              class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition duration-300 flex items-end p-3">
+              <div>
+                <p class="text-white text-sm font-bold">Criativo Studio</p>
+                <p class="text-gray-300 text-[11px]">Estilo para empreendedores criativos</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- 4 - Office -->
+          <div class="relative overflow-hidden rounded-2xl group aspect-[3/4]">
+            <img
+              src="https://lh3.googleusercontent.com/aida-public/AB6AXuDcdjWT6JVSjdHTI5V5rjjnM-v41U2NoC4PYqEwpjgC9Oejlgw-M9C-m7g6LrSHFLJyrmGqkCFM9GiFEkxpNInIycM_jLm-Fps0dBCzhV1c02rRIsd5AeJ9wM2TTuAqdRw5usINm-LBG7TpTH8SRn_Qim3KpEFIqh5EqeCXwzGvIUH-zg1_Q-mr3q8eObo7Y-JLsHMFS7yiqB9QljCdNfqS0hl--LG7D9G8C_6GL8zdiWnJoalKchehaK7lvuD3MroxYyzkZgmatcY"
+              alt="AI generated man in modern office environment"
+              class="absolute inset-0 h-full w-full object-cover transition duration-500 group-hover:scale-110" />
+            <div
+              class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition duration-300 flex items-end p-3">
+              <div>
+                <p class="text-white text-sm font-bold">Office Lifestyle</p>
+                <p class="text-gray-300 text-[11px]">Escritório contemporâneo</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- 5 - Cinemático -->
+          <div class="relative overflow-hidden rounded-2xl group aspect-[3/4]">
+            <img
+              src="https://lh3.googleusercontent.com/aida-public/AB6AXuB3hX0DfD1ZrIWjownuzxfgOmtH-0Xl915tD2IvHdmav7Bo2ngILnxXx02tI1RAPM9jwmBLavhlyWTP06YXOU2ANeqIG7IxtdyyIErixZncuDN_5IvVWJcYz8St_enE4DX3stT5Hi-l2nVAFLAfTAy0gLZ39-Ib4THTcvJZ6H_xxjgBiTucvS2qB_Q9akxrN1apJqHe81eR35hjXVEQJxqtdPGZjQF83oGGG-30FNltYL6Kd01N4lm0xOSKzTRTC0quJ-a4jiGZrEk"
+              alt="AI generated portrait cinematic lighting"
+              class="absolute inset-0 h-full w-full object-cover transition duration-500 group-hover:scale-110" />
+            <div
+              class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition duration-300 flex items-end p-3">
+              <div>
+                <p class="text-white text-sm font-bold">Cinemático</p>
+                <p class="text-gray-300 text-[11px]">Luz dramática e contraste</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- 6 - Headshot clássico -->
+          <div class="relative overflow-hidden rounded-2xl group aspect-[3/4]">
+            <img
+              src="https://lh3.googleusercontent.com/aida-public/AB6AXuCuGMKG269A7HK1HWlS16daFtvNKfJKnuInlGE_9BbuyC5RzAycUNGFzU1CWW-OUTTg-O9jYcQs4XuZ1l3NbROBLh7z7wLFIV0MoayEL0k_9GADLFB9EFNOre3hszdGTxwpoR9khaLuDqjxzkQTWptVCGk4bi68rMnJyQnx9D4cIoZ-GGe4naTjRt1PHE3X0F3hU230C3kR3lya0D4JGcN6R0z7t5gcvgwK5vbEU7Y1haKbN-W4QWloFlT2CsMZ8L_biCpOExvVLlM"
+              alt="AI generated man headshot"
+              class="absolute inset-0 h-full w-full object-cover transition duration-500 group-hover:scale-110" />
+            <div
+              class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition duration-300 flex items-end p-3">
+              <div>
+                <p class="text-white text-sm font-bold">Headshot Clássico</p>
+                <p class="text-gray-300 text-[11px]">Foco total no rosto</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- 7 - Minimal Studio -->
+          <div class="relative overflow-hidden rounded-2xl group aspect-[3/4]">
+            <img
+              src="https://lh3.googleusercontent.com/aida-public/AB6AXuDhOKI8MSA2pUDBv71PQRg895SYzkLYhcLA7BET6PFxxWOekB39pg0OCt_uHvehEnZC8ID2_9dm9_xS3OR1i9e_N0NQ2O4yXAv8LQsvAAceW1ldrh9E-K7wSAqaG2JIQR1yj8Yc4Bn00CuUVR1oanhdTGSCBNwrN8NV649dz5HOX1nyrDWyIe-I7dX79_RidsrDWIc9CRJfVZ_dMGjH3bcu3NBkc8ORfb9YTXKtpUNNey3ONxVB7VDslTrhp04M0lXJtdFLqfgMvNo"
+              alt="AI generated minimalist studio"
+              class="absolute inset-0 h-full w-full object-cover transition duration-500 group-hover:scale-110" />
+            <div
+              class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition duration-300 flex items-end p-3">
+              <div>
+                <p class="text-white text-sm font-bold">Minimal Studio</p>
+                <p class="text-gray-300 text-[11px]">Fundo neutro, foco em você</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- 8 - Repetição 1 -->
+          <div class="relative overflow-hidden rounded-2xl group aspect-[3/4]">
+            <img
+              src="https://lh3.googleusercontent.com/aida-public/AB6AXuDTihqjbl_KinC965aTjQ9dElwnfI_t8xQonqoHJS8xCnOn18Y7FqDDYHAvLSkfw3jLOZnft_9BxrbKWuXzvM70hcQB_J1Vjnn3ciuFTlkqzUYj62CFTNExloFUnPlAkrdd8VL7pUeDHZXjWNUAdYJSYl8wEUhicFr_UTkVmWrtXgpzHqWk-r6InN5p-weD_x5Lp9ER50Q7X1wbIwxwpU30nl0KdPa97Qben3OkctR6mrmJcz7DDa7I5k09CCkCe-8SOOGqOR4VZWI"
+              alt="AI generated business suit portrait"
+              class="absolute inset-0 h-full w-full object-cover transition duration-500 group-hover:scale-110" />
+            <div
+              class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition duration-300 flex items-end p-3">
+              <div>
+                <p class="text-white text-sm font-bold">Executivo Close</p>
+                <p class="text-gray-300 text-[11px]">Ensaio só com o rosto</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- 9 - Repetição 2 -->
+          <div class="relative overflow-hidden rounded-2xl group aspect-[3/4]">
+            <img
+              src="https://lh3.googleusercontent.com/aida-public/AB6AXuDUKjRQOeVQLafko4f1-g4RmbGCx9_ZRIh8x4iLZ-hEwotHzZOon0DwJPM-AwNCBIqPQO2GROeJThfBMbQd1DVCtRLNDWIs_bklZfs9a8lBEmzI6s_Vi4xBiE9kxIGdYGpSiUzD_tM4F28MMdQldxHD3cXJgSmUTb-jVq7_c_NKOsjHh-fde0wIbYJP1kuWIdWiQFCt6wLyl68xEh1aMBrZQP9dC1galI4ariC8vYTovCffuD9BBreU1-qpO9XZcXbN54Rw0285QUo"
+              alt="AI generated casual tech style"
+              class="absolute inset-0 h-full w-full object-cover transition duration-500 group-hover:scale-110" />
+            <div
+              class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition duration-300 flex items-end p-3">
+              <div>
+                <p class="text-white text-sm font-bold">Casual Tech 2</p>
+                <p class="text-gray-300 text-[11px]">Outra variação do mesmo estilo</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- 10 - Repetição 3 -->
+          <div class="relative overflow-hidden rounded-2xl group aspect-[3/4]">
+            <img
+              src="https://lh3.googleusercontent.com/aida-public/AB6AXuB3hX0DfD1ZrIWjownuzxfgOmtH-0Xl915tD2IvHdmav7Bo2ngILnxXx02tI1RAPM9jwmBLavhlyWTP06YXOU2ANeqIG7IxtdyyIErixZncuDN_5IvVWJcYz8St_enE4DX3stT5Hi-l2nVAFLAfTAy0gLZ39-Ib4THTcvJZ6H_xxjgBiTucvS2qB_Q9akxrN1apJqHe81eR35hjXVEQJxqtdPGZjQF83oGGG-30FNltYL6Kd01N4lm0xOSKzTRTC0quJ-a4jiGZrEk"
+              alt="AI generated cinematic portrait"
+              class="absolute inset-0 h-full w-full object-cover transition duration-500 group-hover:scale-110" />
+            <div
+              class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition duration-300 flex items-end p-3">
+              <div>
+                <p class="text-white text-sm font-bold">Cinemático 2</p>
+                <p class="text-gray-300 text-[11px]">Variação com outro enquadramento</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- 11 - Repetição 4 -->
+          <div class="relative overflow-hidden rounded-2xl group aspect-[3/4]">
+            <img
+              src="https://lh3.googleusercontent.com/aida-public/AB6AXuDhOKI8MSA2pUDBv71PQRg895SYzkLYhcLA7BET6PFxxWOekB39pg0OCt_uHvehEnZC8ID2_9dm9_xS3OR1i9e_N0NQ2O4yXAv8LQsvAAceW1ldrh9E-K7wSAqaG2JIQR1yj8Yc4Bn00CuUVR1oanhdTGSCBNwrN8NV649dz5HOX1nyrDWyIe-I7dX79_RidsrDWIc9CRJfVZ_dMGjH3bcu3NBkc8ORfb9YTXKtpUNNey3ONxVB7VDslTrhp04M0lXJtdFLqfgMvNo"
+              alt="AI generated minimalist studio"
+              class="absolute inset-0 h-full w-full object-cover transition duration-500 group-hover:scale-110" />
+            <div
+              class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition duration-300 flex items-end p-3">
+              <div>
+                <p class="text-white text-sm font-bold">Minimal Studio 2</p>
+                <p class="text-gray-300 text-[11px]">Luz suave e fundos sólidos</p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+
+    <!-- Detailed Info & Benefits -->
+    <section class="py-24 bg-background-dark" id="beneficios">
+      <div class="mx-auto max-w-7xl px-6 lg:px-8">
+        <div class="grid lg:grid-cols-2 gap-16 items-center">
+          <div>
+            <h2 class="text-3xl font-bold text-white mb-6">Por que escolher a PerfilarIA?</h2>
+            <p class="text-lg text-gray-400 mb-8 leading-relaxed">
+              Ensaios fotográficos tradicionais são caros, demorados e muitas vezes intimidadoras. Nós democratizamos o
+              acesso a fotos de alta qualidade para sua carreira.
+            </p>
+            <div class="space-y-6">
+              <div class="flex gap-4">
+                <div
+                  class="flex-shrink-0 flex h-12 w-12 items-center justify-center rounded-full bg-white/5 border border-white/10">
+                  <span class="material-symbols-outlined text-primary">savings</span>
+                </div>
+                <div>
+                  <h4 class="text-xl font-bold text-white">Custo-Benefício Imbatível</h4>
+                  <p class="text-gray-400 text-sm mt-1">Cerca de 15x mais barato que contratar um estúdio, fotógrafo,
+                    maquiador e editor.</p>
+                </div>
+              </div>
+              <div class="flex gap-4">
+                <div
+                  class="flex-shrink-0 flex h-12 w-12 items-center justify-center rounded-full bg-white/5 border border-white/10">
+                  <span class="material-symbols-outlined text-primary">schedule</span>
+                </div>
+                <div>
+                  <h4 class="text-xl font-bold text-white">Economia de Tempo</h4>
+                  <p class="text-gray-400 text-sm mt-1">Sem agendamentos, sem trânsito, sem horas posando. Tudo feito
+                    online em minutos.</p>
+                </div>
+              </div>
+              <div class="flex gap-4">
+                <div
+                  class="flex-shrink-0 flex h-12 w-12 items-center justify-center rounded-full bg-white/5 border border-white/10">
+                  <span class="material-symbols-outlined text-primary">verified</span>
+                </div>
+                <div>
+                  <h4 class="text-xl font-bold text-white">Qualidade Consistente</h4>
+                  <p class="text-gray-400 text-sm mt-1">Iluminação perfeita, pele tratada e fundos profissionais em
+                    todas as fotos.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="relative">
+            <div class="aspect-square rounded-2xl overflow-hidden bg-surface-dark border border-white/10 p-2">
+              <div class="grid grid-cols-2 gap-2 h-full">
+                <img
+                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuC8uMnvSTosu1HUXKmTrk0xJwKrVOhC2gDDs7ipu3kedP0UHvUf_R46nXv-qwG8S3oDIgW4cIuVtlBnRn8mbM439AM37bsEZGlSFe1TuDd28hcvHgtikuh-nMNhJOdR0D2ABPtjAK7t-CcKaL33-Ui9lI8mcrJ72dNA8_nPOuQpkw9E-cKWpozdU4rotjL3_aNtboPIu5GBJTlNSyjxS5xSwBk9RO7WllsGwW1KJgNPYCJu1prVuPCtYorQpjdAtM_wFRClu30ioqU"
+                  alt="Professional man portrait" class="h-full w-full object-cover rounded-xl" />
+                <img
+                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuCMj-71QXSHbpNvoK--R-AHvUkXrJTaHpCO2Drys0RSdKqHa1nEP_PfFezaQLHrq2bRbAsmjfeJgagC7kRkSXnIP9tvVWcCWUPiAeB29b_e2vpqHI2Q0sMwkFKiFK7xUqttLVd2vdcii89B27GjnNoUWsUwF2kVZQdlMedZVr1BJ6IFO57XPLbkSGgLDp2v0WNpc3olaFWHExAAzVRumU2nI6xvcSFaePFQhw2lF-d1KD_syemVpaWN9_Aq6xNWQnCDsrhzxsaNexo"
+                  alt="Professional woman portrait" class="h-full w-full object-cover rounded-xl" />
+              </div>
+            </div>
+            <div class="absolute -bottom-6 -left-6 bg-primary p-6 rounded-2xl shadow-xl max-w-[200px]">
+              <p class="text-black font-bold text-2xl leading-tight">100% Digital</p>
+              <p class="text-black/80 text-sm mt-1">Sem sair de casa.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="py-24 bg-surface-dark" id="depoimentos">
+      <div class="mx-auto max-w-7xl px-6 lg:px-8">
+        <h2 class="text-center text-3xl font-bold text-white mb-16">O que dizem nossos clientes</h2>
+        <div class="grid md:grid-cols-3 gap-8">
+          <div class="bg-background-dark p-8 rounded-2xl border border-white/5 relative">
+            <span class="material-symbols-outlined text-4xl text-white/10 absolute top-6 right-6">format_quote</span>
+            <div class="flex items-center gap-4 mb-6">
+              <img
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuCDJX-Sp8gF28RLLEU1_yqXvJ23WgP1EHmsyW-OVGH0T8S2TjsdIL_y6CNL7mNHAH0BC3N2BugHuaJVq1c_SH1JujknHDVxk0oLcft2mmVZ2lPhfrwCoBvz9FQIqvjYLgjQ0ukzHDNOXnT0jHRnJIO038acbludEBWPe5X6iSmYzVTuvsZOzxHsOIM5OJhB0SH--oaXojl6gtQ0189o7TouqaeH-fMnzKQuSEa5soravYNzdswrq9kJo1BnAxRq_w8-tnFVFpagc6k"
+                alt="User Avatar 1" class="w-12 h-12 rounded-full object-cover" />
+              <div>
+                <h5 class="text-white font-bold">Daniela B.</h5>
+                <p class="text-primary text-xs">Empresária</p>
+              </div>
+            </div>
+            <p class="text-gray-400 text-sm leading-relaxed">
+              "Incrível! As fotos ficaram melhores do que as que fiz em estúdio ano passado. Usei no meu LinkedIn e
+              recebi elogios na mesma hora."
+            </p>
+          </div>
+
+          <div class="bg-background-dark p-8 rounded-2xl border border-white/5 relative">
+            <span class="material-symbols-outlined text-4xl text-white/10 absolute top-6 right-6">format_quote</span>
+            <div class="flex items-center gap-4 mb-6">
+              <img
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuBMHeKBq8EaHNbqamgn_BCuqhiFsaq1XM7syQRF1aIR9kw7Ei5ejZBH43a42G8giPJIOOVA-D3ZjC4ko2-i041UZxrDUcasJhUCQi3VfJU2i4gF4JpCICdjh7xjEut05gJ_8yw0hACQ820-Gb9WQknvcHlVNzFeDOTL1MvUVJaFV36IXavVpxpOSRGJKaXjcUkw5wiz54ycI_tRL5KSNMrNIuxg6-f5nAtrAUme_0epCdc11HY4Fn0Noi91Qub3rquWxGuJ7MAoaTU"
+                alt="User Avatar 2" class="w-12 h-12 rounded-full object-cover" />
+              <div>
+                <h5 class="text-white font-bold">Robson B.</h5>
+                <p class="text-primary text-xs">Pastor</p>
+              </div>
+            </div>
+            <p class="text-gray-400 text-sm leading-relaxed">
+              "Eu odeio tirar fotos, fico travado. Com o IA Studio só precisei mandar umas selfies do rolo da câmera e
+              pronto. Resultado pro em minutos."
+            </p>
+          </div>
+
+          <div class="bg-background-dark p-8 rounded-2xl border border-white/5 relative">
+            <span class="material-symbols-outlined text-4xl text-white/10 absolute top-6 right-6">format_quote</span>
+            <div class="flex items-center gap-4 mb-6">
+              <img
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuCXC1HGCVQ8ZI5YsGwxis-_VRcP1SK_st09Rs0JGi_IHeFYtpXPxh675NTpW0M4snwi_zVTgOuL60tyxU-sl8mtkdJ2PLIyLen7a52sB-63Rrisa-1c17ULx1cI17BeJA4rY4eggllmGaNgKgcwEKzgauoJ5T_nD7aImDcIf_UXWjCwKNQwuanYEcZiNmjKY8za7UUriZWH8EJr30DPgk_muznnfAfSALRvMSmQ1MMk2MD3xSxaiwFWFA1IVT8fE5W4BBLelDFvLCo"
+                alt="User Avatar 3" class="w-12 h-12 rounded-full object-cover" />
+              <div>
+                <h5 class="text-white font-bold">Gil M.</h5>
+                <p class="text-primary text-xs">Advogada</p>
+              </div>
+            </div>
+            <p class="text-gray-400 text-sm leading-relaxed">
+              "A qualidade é surreal. Parece que contratei uma equipe inteira de produção. Ótimo para quem precisa de
+              imagem séria mas tem pouco tempo."
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-24 relative overflow-hidden" id="agendar">
+      <div class="mx-auto max-w-4xl px-6 lg:px-8 text-center relative z-10">
+        <h2 class="text-4xl md:text-5xl font-bold text-white mb-6 tracking-tight">Pronto para sua nova imagem?</h2>
+        <p class="text-xl text-gray-400 mb-10 max-w-2xl mx-auto">
+          Garanta sua presença digital com fotos profissionais geradas por IA. Rápido, acessível e impressionante.
+        </p>
+        <div class="bg-surface-dark p-8 rounded-3xl border border-white/10 inline-block w-full max-w-md shadow-2xl">
+          <div class="flex items-baseline justify-center gap-2 mb-2">
+            <span class="text-sm text-gray-400 line-through">R$ 229,00</span>
+            <span class="text-4xl font-bold text-white">R$ 99,90</span>
+          </div>
+          <p class="text-sm text-gray-400 text-center mb-2">Ou 3x de R$ 47 no cartão de crédito</p>
+
+          <ul class="space-y-3 mb-8 text-gray-300 text-sm">
+            <li class="flex gap-2 items-center justify-center"><span
+                class="material-symbols-outlined text-primary text-lg">check</span> 10 Fotos Geradas</li>
+            <li class="flex gap-2 items-center justify-center"><span
+                class="material-symbols-outlined text-primary text-lg">check</span> 2 Estilos Diferentes</li>
+            <li class="flex gap-2 items-center justify-center"><span
+                class="material-symbols-outlined text-primary text-lg">check</span> Alta Resolução (2K)</li>
+            <li class="flex gap-2 items-center justify-center"><span
+                class="material-symbols-outlined text-primary text-lg">check</span> Entrega em 72 horas</li>
+          </ul>
+          <button
+            class="w-full flex items-center justify-center rounded-full bg-primary h-14 px-8 text-lg font-bold text-black transition hover:bg-primary-hover hover:scale-[1.02] transform duration-200">
+            Quero meu Ensaio
+          </button>
+          <p class="text-xs text-gray-500 mt-4">Pagamento seguro via PIX ou Cartão.</p>
+        </div>
+      </div>
+      <div
+        class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-primary/5 rounded-full blur-3xl -z-10 pointer-events-none">
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="border-t border-white/10 bg-background-dark pt-16 pb-8">
+    <div class="mx-auto max-w-7xl px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
+        <div class="col-span-1 md:col-span-2">
+          <div class="flex items-center gap-3 mb-4">
+            <div class="flex h-8 w-8 items-center justify-center rounded-full bg-primary text-black">
+              <span class="material-symbols-outlined text-lg">auto_fix_high</span>
+            </div>
+            <span class="text-lg font-bold text-white">PerfilarIA®</span>
+          </div>
+          <p class="text-gray-500 text-sm max-w-sm leading-relaxed">
+            Revolucionando a fotografia profissional com inteligência artificial. Tornamos a imagem corporativa
+            acessível a todos.
+          </p>
+        </div>
+        <div>
+          <h4 class="text-white font-bold mb-4">Links Rápidos</h4>
+          <ul class="space-y-2 text-sm text-gray-400">
+            <li><a href="#" class="hover:text-primary transition">Início</a></li>
+            <li><a href="#como-funciona" class="hover:text-primary transition">Como Funciona</a></li>
+            <li><a href="#galeria" class="hover:text-primary transition">Galeria</a></li>
+            <li><a href="#depoimentos" class="hover:text-primary transition">Depoimentos</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="text-white font-bold mb-4">Contato</h4>
+          <ul class="space-y-2 text-sm text-gray-400">
+            <li class="flex items-center gap-2"><span class="material-symbols-outlined text-base">mail</span>
+              contato@perfilaria.com</li>
+            <li class="flex items-center gap-2"><span class="material-symbols-outlined text-base">chat</span> Suporte
+              WhatsApp</li>
+          </ul>
+          <div class="flex gap-4 mt-6">
+            <a href="#" class="text-gray-400 hover:text-white"><span class="sr-only">Instagram</span>IG</a>
+            <a href="#" class="text-gray-400 hover:text-white"><span class="sr-only">Twitter</span>TW</a>
+            <a href="#" class="text-gray-400 hover:text-white"><span class="sr-only">LinkedIn</span>LN</a>
+          </div>
+        </div>
+      </div>
+      <div class="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
+        <p class="text-xs text-gray-600">® 2025 PerfilarIA®. Todos os direitos reservados.</p>
+        <div class="flex gap-6 text-xs text-gray-600">
+          <a href="#" class="hover:text-gray-400">Termos de Uso</a>
+          <a href="#" class="hover:text-gray-400">Privacidade</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Script para inicializar o Juxtapose -->
+  <script>
+    window.addEventListener('load', function () {
+      if (window.juxtapose && document.getElementById('juxtapose-hero')) {
+        new juxtapose.JXSlider('#juxtapose-hero', [
+          {
+            src: 'https://lh3.googleusercontent.com/aida-public/AB6AXuAMoqzmTNCC4ie9U_RDOfJYgxF0RMnO_ouk9Kj12I7oguA2V_nM0NW6V9DqcGfx4464Fb6c5B2g9mmTr22yCVK1ppUp4iRakabhAuj1B7AxgQK-P6xR5r4Tw15ZUF1FX9oc9hQA3P7SadhAlK56Y2K7wijEOsL6I8a-_ghMeD9WB_6L-JWMfHbRANmRWy2VBraiXYvBCTBqLcxPXkwOPS95Vp-MZzIJA658M8ezFKZte4ROrvjfGRJZpzmY-3M3O4fDFG-fWwcwoRQ',
+            label: 'Antes',
+            credit: ''
+          },
+          {
+            src: 'https://lh3.googleusercontent.com/aida-public/AB6AXuDqOyXQNg9d7DL1kLT52J5jGSdPM39yTDNopPSvrt4tuQWQDh0k7RdMDyrX7n7xhfK0KPtxZljkABcuKgPIuNnqZGbKQ26Cxq77jrjILAsliM-wVgYP2DQI_w8FeUa7YGige44mPiTxM0SuUycKsxapect7bZYo8H0yJ-m2qdwvf_RB12bR-Vaz5x27aHm6Y0iQ7MtJrO7nkFlxNkiVHbs-6wIB-uzeiTnhhUK3TTF5Hjlq2qCoSvgPyRvKUVFGnnX5UU3v6meSt_Y',
+            label: 'Depois',
+            credit: ''
+          }
+        ], {
+          animate: true,
+          startingPosition: "50%",
+          showLabels: true,
+          showCredits: false
+        });
+      }
+    });
+  </script>
+
+</body>
+
+</html>
